@@ -1,13 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import MainScreen from './main-screen.jsx';
+import PlacesList from './places-list.jsx';
 import {testDataOffers} from '../../mocks/mocks-for-test.js';
 
 
-it(`MainScreen is rendered correctly`, () => {
+it(`PlacesList is rendered correctly`, () => {
   const tree = renderer
-    .create(<MainScreen
+    .create(<PlacesList
       offers={testDataOffers}
     />)
     .toJSON();

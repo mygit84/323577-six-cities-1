@@ -1,18 +1,21 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+
 import App from './components/app/app.jsx';
+import {dataOffers} from './mocks/offers.js';
 
 
 const mainContainer = document.querySelector(`#root`);
 
 
-const init = () => {
+const init = (offers) => {
 
   ReactDOM.render(
-      <App/>,
+      <App
+        offers={offers}
+      />,
       mainContainer
   );
 };
 
-init();
-
+init(dataOffers);
